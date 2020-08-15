@@ -37,8 +37,7 @@ svg {
   width: 100%;
 }
 #clock {
-  height: 280px;
-  width: 300px;
+  margin-top: 1vh;
 }
 #sel {
   width: 100%;
@@ -59,9 +58,9 @@ svg {
   </div>
   <div id="dt">???</div>
   <div id="clock">
-    <svg viewBox='-70 -50 120 100'>
-      <circle class='clock-face' r='50' />
-      <circle r='20' fill='#cde' />
+    <svg viewBox='-50 -50 100 100'>
+      <circle class='clock-face' r='48%' />
+      <circle r='30%' fill='#cde' />
       <polyline id='thr' fill='blue' points='0,0 5,3 30,0 5,-3' />
       <polyline id='tmi' fill='navy' points='0,0 5,2 40,0 5,-2' />
       <polyline id='tse' fill='olive' points='0,0 5,1 45,0 5,-1' />
