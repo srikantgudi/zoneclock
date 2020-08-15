@@ -5,6 +5,7 @@ t.innerHTML = `
 * {
   outline: 0 none;
   font-family: Helvetica;
+  font-size: 14px;
 }
 .clock-container {
   box-shadow: 0 2px 10px #999999;
@@ -18,11 +19,11 @@ t.innerHTML = `
   color: #ffffaa;
   padding: 4px 8px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 8px 8px 0 0;
 }
 #zone {
   font-family: cursive;
-  font-size: 20px;
+  font-size: 24px;
   color: lightcyan;
 }
 #dt {
@@ -30,33 +31,50 @@ t.innerHTML = `
   padding: 4px 8px;
   text-align: center;
   font-size: 18px;
-  border-radius: 0 0 20px 20px;
+  border-radius: 8px 8px 0 0;
 }
 svg {
   height: 100%;
   width: 100%;
 }
 #clock {
-  margin-top: 1vh;
+  margin-top: 4vh;
 }
 #sel {
   width: 100%;
   height: 30px;
   font-size: 20px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 8px 8px 0 0;
+}
+#ddn {
+  box-sizing: border-box;
+  position: absolute;
+  left: 4vw;
+  z-index: 999;
+  height: 22px;
+  overflow-y: hidden;
+  padding: 4px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+#ddn:hover {
+  height: auto;
 }
 .clock-face {
   fill: #eee;
   stroke: darkgrey;
 }
+option {
+  padding: 0 4vw;
+}
 </style>
 <div class="clock-container">
   <div id="title">Zone: <span id='zone'></span></div>
+  <div id="dt">- dt -</div>
   <div>
     <select id="sel">
     </select>
   </div>
-  <div id="dt">???</div>
   <div id="clock">
     <svg viewBox='-50 -50 100 100'>
       <circle class='clock-face' r='48%' />
@@ -74,7 +92,17 @@ class ZoneClock extends HTMLElement {
     super();
     this.zdt = '';
     this.zone = '';
-    this.zones = ['America/Los_Angeles', 'America/New_York', 'Europe/London', 'Asia/Dubai', 'Asia/Kolkata', 'Asia/Tokyo'];
+    this.zones = [
+      {name: 'US-West', zone: 'America/Los_Angeles'},
+      {name: 'US-East', zone: 'America/New_York'},
+      {name: 'United Kingdom', zone: 'Europe/London'},
+      {name: 'Dubai', zone: 'Asia/Dubai'},
+      {name: 'India', zone: 'Asia/Kolkata'},
+      {name: 'Japan', zone: 'Asia/Tokyo'},
+      {name: 'Perth', zone: 'Australia/Perth'},
+      {name: 'Sydney', zone: 'Australia/Sydney'},
+      {name: 'New Zealand', zone: 'Pacific/Auckland'}
+    ];
     this.timer = null;
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(t.content.cloneNode( true ));
@@ -106,7 +134,7 @@ class ZoneClock extends HTMLElement {
   connectedCallback() {
     this.zone = this.getAttribute('zone');
     this.setZone();
-    this.zones.forEach(z => this.getEl("#sel").appendChild(new Option(z,z,true,z === this.zone)));
+    this.zones.forEach(z => this.getEl("#sel").appendChild(new Option(`${z.name} - ${z.zone}`,z.zone,true,z.zone === this.zone)));
     this.getEl('#sel').addEventListener('change', e => {
       this.zone = e.target.value;
       this.setZone();
