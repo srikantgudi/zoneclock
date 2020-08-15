@@ -2,9 +2,13 @@ const t = document.createElement('template');
 
 t.innerHTML = `
 <style>
+* {
+  outline: 0 none;
+  font-family: Helvetica;
+}
 .clock-container {
   box-shadow: 0 2px 10px #999999;
-  width: 36vw;
+  width: 30vw;
   padding: 2px;
   border-radius: 4px;
   background: linear-gradient(#ccc, #fefefe, #ddd);
@@ -15,6 +19,11 @@ t.innerHTML = `
   padding: 4px 8px;
   text-align: center;
   border-radius: 10px;
+}
+#zone {
+  font-family: cursive;
+  font-size: 20px;
+  color: lightcyan;
 }
 #dt {
   box-shadow: 0 0 4px #999999;
