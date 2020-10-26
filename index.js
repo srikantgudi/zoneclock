@@ -36,7 +36,7 @@ t.innerHTML = `
   border-radius: 8px 8px 0 0;
 }
 svg {
-  height: 100%;
+  height: 80%;
   width: 100%;
 }
 #clock {
