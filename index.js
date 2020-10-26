@@ -70,12 +70,9 @@ option {
   fill: #eee;
   stroke: darkgrey;
 }
-option {
-  padding: 0 4vw;
-}
 svg {
-  height: 60vh;
-  width: 60vw;
+  height: 100%;
+  width: 100%;
 }
 </style>
 <div class="clock-container">
