@@ -8,11 +8,10 @@ t.innerHTML = `
   font-size: 14px;
 }
 .clock-container {
+  boz-sizing: border-box;
   box-shadow: 0 2px 10px #999999;
-  width: 40vw;
-  height: 80vh;
+  width: 300px;
   margin: 0 auto;
-  padding: 2px;
   border-radius: 4px;
   background: linear-gradient(#ccc, #fefefe, #ddd);
 }
@@ -40,31 +39,17 @@ svg {
   width: 100%;
 }
 #clock {
-  margin-top: 4vh;
+  margin: auto 1%;
 }
 #sel {
+  box-sizing: border-box;
+  font-size: 17px;
   width: 100%;
-  height: auto;
-  font-size: 20px;
   border-radius: 8px 8px 0 0;
   margin-top: 10px;
 }
 option {
   height: 30px;
-}
-#ddn {
-  box-sizing: border-box;
-  position: absolute;
-  left: 4vw;
-  z-index: 999;
-  height: 22px;
-  overflow-y: hidden;
-  padding: 4px 20px;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-#ddn:hover {
-  height: auto;
 }
 .clock-face {
   fill: #eee;
@@ -86,12 +71,12 @@ svg {
   </div>
 
   <div id="clock">
-    <svg viewBox="-50 -50 100 100">
-      <circle class='clock-face' r="50" />
-      <circle fill="#def" r="30" />
-      <polyline id="thr" fill="blue" points="0,0 5,2.5 25,0 5,-2.5" />
-      <polyline id="tmi" fill="blue" points="0,0 5,2 45,0 5,-2" />
-      <polyline id="tse" fill="olive" points="0,0 5,1 45,0 5,-1" />
+    <svg height="300" width="300">
+      <circle class='clock-face' r="135" cx="150" cy="150" />
+      <circle fill='lightcyan' r="120" cx="150" cy="150" />
+      <polyline id="thr" fill="blue" points="150,150 155,155 250,150 155,145" />
+      <polyline id="tmi" fill="blue" points="150,150 155,155 280,150 155,145" />
+      <polyline id="tse" fill="olive" points="150,150 155,152 280,150 155,148" />
     </svg>
   </div>
 </div>
@@ -135,7 +120,7 @@ class ZoneClock extends HTMLElement {
     }, 1000);
   }
   turnAngle(el, ang) {
-    this.getEl(el).setAttribute('transform', `rotate(${ang})`)
+    this.getEl(el).setAttribute('transform', `rotate(${ang} 150 150)`)
   }
   setZone() {
     this.getEl('#zone').innerHTML = this.zone;
