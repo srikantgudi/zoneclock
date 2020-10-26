@@ -10,7 +10,7 @@ t.innerHTML = `
 .clock-container {
   box-shadow: 0 2px 10px #999999;
   width: 60vw;
-  height: 60vh;
+  height: 80vh;
   padding: 2px;
   border-radius: 4px;
   background: linear-gradient(#ccc, #fefefe, #ddd);
@@ -88,10 +88,10 @@ option {
 
     <!-- right nav -->
     <div id="clock">
-      <svg viewBox='-50 -50 100 100'>
-        <circle class='clock-face' r='40%' />
-        <circle r='25%' fill='#cde' />
-        <polyline id='thr' fill='blue' points='0,0 5,3 30,0 5,-3' />
+      <svg height="400" width="400>
+        <circle class='clock-face' r='190' />
+        <circle r='140' fill='#cde' />
+        <polyline id='thr' fill='blue' points='200,200 210,210 350,200 210,190' />
         <polyline id='tmi' fill='navy' points='0,0 5,2 40,0 5,-2' />
         <polyline id='tse' fill='olive' points='0,0 5,1 45,0 5,-1' />
       </svg>
