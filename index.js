@@ -16,11 +16,6 @@ t.innerHTML = `
   border-radius: 4px;
   background: linear-gradient(#ccc, #fefefe, #ddd);
 }
-.clock-layout {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-gap: 10px;
-}
 #title {
   background-color: #666666;
   color: #ffffaa;
@@ -82,22 +77,18 @@ option {
 <div class="clock-container">
   <div id="title">Zone: <span id='zone'></span></div>
   <div id="dt">- dt -</div>
-  <div class="clock-layout">
-    <!-- left nav -->
-    <div>
-      <select style="height:inherit" size="10" id="sel"></select>
-    </div>
+  <div>
+    <select style="height:inherit" id="sel"></select>
+  </div>
 
-    <!-- right nav -->
-    <div id="clock">
-      <svg height="400" width="400">
-        <circle class='clock-face' r='190' cx='200' cy='200' />
-        <circle r='140' cx='200' cy='200' fill='#cde' />
-        <polyline id='thr' fill='blue' points='200,200 210,210 350,200 210,190' />
-        <polyline id='tmi' fill='navy' points='200,200 210,210 380,200 210,190' />
-        <polyline id='tse' fill='olive' points='200,200 210,208 380,200 210,195' />
-      </svg>
-    </div>
+  <div id="clock">
+    <svg height="400" width="400">
+      <circle class='clock-face' r='190' cx='200' cy='200' />
+      <circle r='140' cx='200' cy='200' fill='#cde' />
+      <polyline id='thr' fill='blue' points='200,200 210,210 350,200 210,190' />
+      <polyline id='tmi' fill='navy' points='200,200 210,210 380,200 210,190' />
+      <polyline id='tse' fill='olive' points='200,200 210,208 380,200 210,195' />
+    </svg>
   </div>
 </div>
 `;
