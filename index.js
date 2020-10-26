@@ -86,7 +86,7 @@ svg {
   </div>
 
   <div id="clock">
-    <svg viewBox="-50 -50 100 120">
+    <svg viewBox="-50 -50 100 100">
       <circle class='clock-face' r="50" />
       <circle fill="#def" r="30" />
       <polyline id="thr" fill="blue" points="0,0 5,2.5 25,0 5,-2.5" />
