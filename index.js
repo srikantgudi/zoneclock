@@ -92,8 +92,8 @@ option {
         <circle class='clock-face' r='190' />
         <circle r='140' fill='#cde' />
         <polyline id='thr' fill='blue' points='200,200 210,210 350,200 210,190' />
-        <polyline id='tmi' fill='navy' points='0,0 5,2 40,0 5,-2' />
-        <polyline id='tse' fill='olive' points='0,0 5,1 45,0 5,-1' />
+        <polyline id='tmi' fill='navy' points='200,200 210,215 380,200 210,195' />
+        <polyline id='tse' fill='olive' points='200,200 210,212 380,200 210,198' />
       </svg>
     </div>
   </div>
