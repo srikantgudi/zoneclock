@@ -78,7 +78,7 @@ option {
   <div class="clock-layout">
     <!-- left nav -->
     <div>
-      <div>
+      <div style="height:inherit">
         <select size="10" id="sel">
         </select>
       </div>
