@@ -49,6 +49,10 @@ svg {
   height: auto;
   font-size: 20px;
   border-radius: 8px 8px 0 0;
+  margin-top: 10px;
+}
+option {
+  height: 30px;
 }
 #ddn {
   box-sizing: border-box;
