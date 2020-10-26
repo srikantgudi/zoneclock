@@ -11,13 +11,15 @@ t.innerHTML = `
   box-shadow: 0 2px 10px #999999;
   width: 60vw;
   height: 80vh;
+  margin: 0 auto;
   padding: 2px;
   border-radius: 4px;
   background: linear-gradient(#ccc, #fefefe, #ddd);
 }
 .clock-layout {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 #title {
   background-color: #666666;
