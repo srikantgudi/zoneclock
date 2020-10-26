@@ -88,8 +88,8 @@ option {
     <!-- right nav -->
     <div id="clock">
       <svg viewBox='-50 -50 100 100'>
-        <circle class='clock-face' r='48%' />
-        <circle r='30%' fill='#cde' />
+        <circle class='clock-face' r='40%' />
+        <circle r='25%' fill='#cde' />
         <polyline id='thr' fill='blue' points='0,0 5,3 30,0 5,-3' />
         <polyline id='tmi' fill='navy' points='0,0 5,2 40,0 5,-2' />
         <polyline id='tse' fill='olive' points='0,0 5,1 45,0 5,-1' />
