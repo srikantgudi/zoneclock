@@ -88,7 +88,7 @@ option {
 
     <!-- right nav -->
     <div id="clock">
-      <svg height="400" width="400>
+      <svg height="400" width="400">
         <circle class='clock-face' r='190' cx='200' cy='200' />
         <circle r='140' cx='200' cy='200' fill='#cde' />
         <polyline id='thr' fill='blue' points='200,200 210,210 350,200 210,190' />
