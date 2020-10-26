@@ -46,7 +46,7 @@ svg {
 }
 #sel {
   width: 100%;
-  height: 30px;
+  height: auto;
   font-size: 20px;
   border-radius: 8px 8px 0 0;
 }
@@ -78,10 +78,7 @@ option {
   <div class="clock-layout">
     <!-- left nav -->
     <div>
-      <div style="height:inherit">
-        <select size="10" id="sel">
-        </select>
-      </div>
+      <select style="height:inherit" size="10" id="sel"></select>
     </div>
 
     <!-- right nav -->
