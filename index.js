@@ -9,7 +9,7 @@ t.innerHTML = `
 }
 .clock-container {
   box-shadow: 0 2px 10px #999999;
-  width: auto;
+  width: 40vw;
   height: 80vh;
   margin: 0 auto;
   padding: 2px;
