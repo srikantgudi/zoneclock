@@ -13,6 +13,8 @@ t.innerHTML = `
   padding: 2px;
   border-radius: 4px;
   background: linear-gradient(#ccc, #fefefe, #ddd);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 #title {
   background-color: #666666;
@@ -69,12 +71,17 @@ option {
 }
 </style>
 <div class="clock-container">
-  <div id="title">Zone: <span id='zone'></span></div>
-  <div id="dt">- dt -</div>
+  <!-- left nav -->
   <div>
-    <select id="sel">
-    </select>
+    <div id="title">Zone: <span id='zone'></span></div>
+    <div id="dt">- dt -</div>
+    <div>
+      <select size="10" id="sel">
+      </select>
+    </div>
   </div>
+
+  <!-- right nav -->
   <div id="clock">
     <svg viewBox='-50 -50 100 100'>
       <circle class='clock-face' r='48%' />
