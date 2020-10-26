@@ -73,6 +73,10 @@ option {
 option {
   padding: 0 4vw;
 }
+svg {
+  height: 60vh;
+  width: 60vw;
+}
 </style>
 <div class="clock-container">
   <div id="title">Zone: <span id='zone'></span></div>
@@ -82,12 +86,12 @@ option {
   </div>
 
   <div id="clock">
-    <svg height="400" width="400">
-      <circle class='clock-face' r='190' cx='200' cy='200' />
-      <circle r='140' cx='200' cy='200' fill='#cde' />
-      <polyline id='thr' fill='blue' points='200,200 210,210 350,200 210,190' />
-      <polyline id='tmi' fill='navy' points='200,200 210,210 380,200 210,190' />
-      <polyline id='tse' fill='olive' points='200,200 210,208 380,200 210,195' />
+    <svg viewBox="-50 -50 100 120">
+      <circle class='clock-face' r="50" />
+      <circle fill="#def" r="30" />
+      <polyline id="thr" fill="blue" points="0,0 5,2.5 25,0 5,-2.5" />
+      <polyline id="tmi" fill="blue" points="0,0 5,2 45,0 5,-2" />
+      <polyline id="tse" fill="olive" points="0,0 5,1 45,0 5,-1" />
     </svg>
   </div>
 </div>
@@ -131,7 +135,7 @@ class ZoneClock extends HTMLElement {
     }, 1000);
   }
   turnAngle(el, ang) {
-    this.getEl(el).setAttribute('transform', `rotate(${ang} 200 200)`)
+    this.getEl(el).setAttribute('transform', `rotate(${ang})`)
   }
   setZone() {
     this.getEl('#zone').innerHTML = this.zone;
