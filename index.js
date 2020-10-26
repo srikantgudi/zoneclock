@@ -71,7 +71,7 @@ option {
   stroke: darkgrey;
 }
 svg {
-  height: 100%;
+  height: 80vh;
   width: 100%;
 }
 </style>
