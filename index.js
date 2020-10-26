@@ -18,7 +18,7 @@ t.innerHTML = `
 }
 .clock-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   grid-gap: 10px;
 }
 #title {
