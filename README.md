@@ -1,2 +1,2 @@
-# srikantgudi.github.io/zoneclock
+# Zone clock
 Web component to view clock for a selected zone
