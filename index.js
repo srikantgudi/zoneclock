@@ -138,7 +138,7 @@ class ZoneClock extends HTMLElement {
     }, 1000);
   }
   turnAngle(el, ang) {
-    this.shadowRoot.querySelector(el).setAttribute('transform', `rotate(${ang} 0 0)`)
+    this.shadowRoot.querySelector(el).setAttribute('transform', `rotate(${ang} 200 200)`)
   }
   setZone() {
     this.getEl('#zone').innerHTML = this.zone;
