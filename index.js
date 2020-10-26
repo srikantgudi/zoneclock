@@ -36,7 +36,7 @@ t.innerHTML = `
   border-radius: 8px 8px 0 0;
 }
 svg {
-  height: 80%;
+  height: 100%;
   width: 100%;
 }
 #clock {
@@ -70,8 +70,11 @@ option {
   fill: #eee;
   stroke: darkgrey;
 }
+select {
+  font-size: 12px;
+}
 svg {
-  height: 80vh;
+  height: 100%;
   width: 100%;
 }
 </style>
@@ -84,7 +87,7 @@ svg {
 
   <div id="clock">
     <svg viewBox="-50 -50 100 100">
-      <circle class='clock-face' r="40" />
+      <circle class='clock-face' r="50" />
       <circle fill="#def" r="30" />
       <polyline id="thr" fill="blue" points="0,0 5,2.5 25,0 5,-2.5" />
       <polyline id="tmi" fill="blue" points="0,0 5,2 45,0 5,-2" />
